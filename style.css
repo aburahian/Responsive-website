@@ -1,0 +1,333 @@
+* {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    margin: 0px;
+    background-color: aliceblue;
+}
+
+.container {
+    max-width: 1000px;
+    width: 98%;
+    height: auto;
+    margin: 10px auto;
+    background-color: white;
+    border: 1px solid gainsboro;
+    box-shadow: 0px 0px 30px rgb(0, 0, 0, 0.1);
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+.search-holder form>input[type="search"] {
+    border: 1px solid gainsboro;
+    padding: 10px;
+}
+
+.search-holder form>button[type="submit"] {
+    background-color: black;
+    color: white;
+    padding: 11px;
+    margin: -5px;
+    border: 0px;
+}
+
+.main-manu {
+    background-color: black;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-manu>ul {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    display: flex;
+    justify-content: start;
+}
+
+.main-manu>ul>li {
+    position: relative;
+}
+
+.main-manu>ul>li>a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.main-manu>ul>li>a:hover {
+    background-color: orange;
+}
+
+.drop {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    position: absolute;
+    display: none;
+    background-color: teal;
+    min-width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.drop>li>a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.drop>li>a:hover {
+    background-color: orange;
+    padding-left: 25px;
+}
+
+.main-manu>ul>li:hover .drop {
+    display: block;
+}
+
+.content-holder {
+    display: flex;
+    justify-content: space-between;
+    background-color: cornflowerblue;
+    border: 1px solid gainsboro;
+}
+
+.lSPager.lSpg {
+    margin-top: -25px ! IMPORTANT;
+}
+
+main.content {
+    background-color: white;
+    padding: 25px;
+    width: 80%;
+}
+
+main.content h1~h2 {
+    font-size: 1em;
+    color: darkgrey;
+}
+
+.sidebar {
+    padding: 25px;
+    width: 20%;
+}
+
+.sidebar .widget h3 {
+    color: white;
+}
+
+.sidebar .widget ul,
+.footer-widget>ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.sidebar .widget>ul>li>a,
+.footer-widget>ul>li>a {
+    text-decoration: none;
+    color: white;
+}
+
+.sidebar .widget>ul>li>a:hover,
+.footer-widget>ul>li>a:hover {
+    color: black;
+}
+
+.footer-widget-holder {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.767);
+    color: white;
+    justify-content: space-around;
+}
+
+.footer-widget {
+    font: small;
+    padding: 25px;
+}
+
+.side-footer {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.side-footer>p {
+    margin: 0px;
+}
+
+/* services-product */
+.Services-holder,
+.product-holder {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.Services,
+.product {
+    padding: 20px;
+    border: 1px solid gainsboro;
+}
+
+.Services>h3 {
+    font-size: 25px;
+}
+
+.Services a,
+.product a {
+    text-decoration: none;
+    color: teal;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+/* services-product */
+/* about-page */
+.about-holder {
+    padding: 20px;
+}
+
+/* about-page */
+/* map-contect */
+.gmap {
+    width: 100%;
+    height: 400px;
+}
+
+.gmap iframe {
+    width: 100%;
+    height: 400px;
+}
+
+.contect-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contect-form {
+    padding: 25px;
+    width: 60%;
+}
+
+.contect-time {
+    padding: 25px;
+    width: 40%;
+}
+
+.contect-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contect-form form input,
+.contect-form form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0px;
+}
+
+.contect-form form button {
+    padding: 10px;
+    width: 100%;
+    margin: 5px 0px;
+
+}
+
+/* map */
+/* mobile-menu */
+.mobile-menu {
+    display: none !important;
+}
+
+/* mobile-menu */
+/* responsive */
+@media screen and (max-width:600px) {
+    .main-header {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mobile-menu {
+        display: flex !important;
+        justify-content: space-between !important;
+    }
+
+    .main-manu>ul:nth-of-type(2) {
+
+        display: none;
+    }
+
+    .drop>li>a {
+        display: block;
+        width: auto;
+    }
+
+    #adaptive img {
+        width: 100%;
+    }
+
+    .content-holder {
+        flex-direction: column;
+    }
+
+    .content-holder .content,
+    .content-holder .sidebar {
+        width: auto;
+    }
+
+    .footer-widget-holder {
+        flex-direction: column;
+    }
+
+    .footer-widget-holder .footer-widget {
+        padding: 10px 25px;
+    }
+
+    /* services-product-about */
+    .Services-holder {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product-holder {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-holder {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* services -product-about */
+    /* contect */
+    .contect-details {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* contect */
+}
+
+/* responsive */
